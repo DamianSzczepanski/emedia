@@ -43,8 +43,8 @@ namespace WindowsFormsApp2
             float[,] FFTPhaseLog;            // Log of Fourier Phase
             public int[,] FFTNormalized;     // Normalized FFT Magnitude : Scale 0-1
             public int[,] FFTPhaseNormalized;// Normalized FFT Phase : Scale 0-1
-            int nx, ny;                      //Number of Points in Width & height
-            int Width, Height;
+            public int nx, ny;                      //Number of Points in Width & height
+            public int Width, Height;
             COMPLEX[,] Fourier;              //Fourier Magnitude  Array Used for Inverse FFT
             public COMPLEX[,] FFTShifted;    // Shifted FFT 
             public COMPLEX[,] Output;        // FFT Normal

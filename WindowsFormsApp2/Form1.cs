@@ -42,8 +42,8 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            byte[] Obrazek = File.ReadAllBytes("picture.jpg");
-            Bitmap ob=new Bitmap ("picture.jpg");
+            byte[] Obrazek = File.ReadAllBytes("picture8.jpg");
+           // Bitmap ob=new Bitmap ("picture1.jpg");
             //FFT fft=new FFT(ob);
             Decode dekoduj = new Decode();
             dekoduj.Dekoduj_Wlasnosci(Obrazek);
@@ -51,8 +51,10 @@ namespace WindowsFormsApp2
             //fft.Displayimage();
             //fft.FFTPlot();
             //pictureBox1.Load("ob");
-            pictureBox1.Image = Image.FromFile("picture.jpg");
+            pictureBox1.Image = Image.FromFile("picture8.jpg");
             FFT fft = new FFT((Bitmap)pictureBox1.Image);
+            Console.WriteLine(fft.Height);
+           // FFT fft=new FFT(ob);
             fft.ForwardFFT();
             fft.FFTShift();
             fft.FFTPlot(fft.FFTShifted);
@@ -68,6 +70,11 @@ namespace WindowsFormsApp2
             //pictureBox1.Size = new Size(dekoduj.szerokosc, dekoduj.wysokosc);
             //pictureBox1.Image = ob1;
             //Console.ReadKey();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
